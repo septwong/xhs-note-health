@@ -1,0 +1,69 @@
+/* 小红书笔记健康度检查器 - 样式 */
+
+/* CSS 变量定义 */
+:root {
+  --xhs-badge-green: #22c55e;
+  --xhs-badge-yellow: #eab308;
+  --xhs-badge-gray: #9ca3af;
+  --xhs-badge-red-light: #ef4444;
+  --xhs-badge-red-medium: #dc2626;
+  --xhs-badge-red-heavy: #7f1d1d;
+}
+
+/* Badge 基础样式 */
+.xhs-health-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  margin-left: 8px;
+  vertical-align: middle;
+  cursor: default;
+}
+
+.xhs-health-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.xhs-badge-icon {
+  font-size: 10px;
+  line-height: 1;
+}
+
+.xhs-badge-text {
+  line-height: 1;
+}
+
+/* 不同级别的具体颜色 */
+.xhs-health-badge[data-level="4"] {
+  background-color: var(--xhs-badge-green);
+}
+
+.xhs-health-badge[data-level="2"] {
+  background-color: var(--xhs-badge-yellow);
+  color: #1f2937;
+}
+
+.xhs-health-badge[data-level="1"] {
+  background-color: var(--xhs-badge-gray);
+}
+
+.xhs-health-badge[data-level="-1"] {
+  background-color: var(--xhs-badge-red-light);
+}
+
+.xhs-health-badge[data-level="-5"] {
+  background-color: var(--xhs-badge-red-medium);
+}
+
+.xhs-health-badge[data-level="-102"] {
+  background-color: var(--xhs-badge-red-heavy);
+}

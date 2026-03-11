@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小红书笔记健康度</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="xhs-popup-container">
+    <div class="xhs-popup-header">
+      <span class="xhs-logo">📕</span>
+      笔记健康度说明
+    </div>
+
+    <div class="xhs-legend">
+      <div class="xhs-legend-item">
+        <span class="xhs-legend-dot" style="background: #22c55e"></span>
+        <span class="xhs-legend-text">🟢 正常推荐 - 曝光良好</span>
+      </div>
+      <div class="xhs-legend-item">
+        <span class="xhs-legend-dot" style="background: #eab308"></span>
+        <span class="xhs-legend-text">🟡 基本正常 - 有曝光</span>
+      </div>
+      <div class="xhs-legend-item">
+        <span class="xhs-legend-dot" style="background: #9ca3af"></span>
+        <span class="xhs-legend-text">⚪ 新帖初始 - 等待推荐</span>
+      </div>
+      <div class="xhs-legend-item">
+        <span class="xhs-legend-dot" style="background: #ef4444"></span>
+        <span class="xhs-legend-text">🔴 轻度限流 - 建议优化</span>
+      </div>
+      <div class="xhs-legend-item">
+        <span class="xhs-legend-dot" style="background: #dc2626"></span>
+        <span class="xhs-legend-text">🔴🔴 中度限流 - 检查违规</span>
+      </div>
+      <div class="xhs-legend-item">
+        <span class="xhs-legend-dot" style="background: #7f1d1d"></span>
+        <span class="xhs-legend-text">⛔ 严重限流 - 限制展示</span>
+      </div>
+    </div>
+
+    <div class="xhs-stats">
+      <div class="xhs-stats-title">当前页面统计</div>
+      <div id="xhs-stats-content" class="xhs-stats-content">
+        <span class="xhs-loading">加载中...</span>
+      </div>
+    </div>
+
+    <div class="xhs-popup-footer">
+      <small>数据仅本地存储，不上传服务器</small>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

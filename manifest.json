@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "小红书笔记健康度",
+  "version": "1.0.0",
+  "description": "在小红书创作者后台显示笔记限流状态，帮助创作者快速了解笔记推荐情况",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://creator.xiaohongshu.com/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://creator.xiaohongshu.com/*"
+      ],
+      "js": [
+        "utils/level-config.js",
+        "content/content.js"
+      ],
+      "css": [
+        "content/styles.css"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}
